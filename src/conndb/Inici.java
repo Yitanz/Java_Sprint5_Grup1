@@ -62,6 +62,7 @@ public class Inici extends javax.swing.JFrame {
         jButton2 = new javax.swing.JButton();
         jScrollPane2 = new javax.swing.JScrollPane();
         tabla = new javax.swing.JTable();
+        bianda = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         addWindowListener(new java.awt.event.WindowAdapter() {
@@ -81,7 +82,7 @@ public class Inici extends javax.swing.JFrame {
         consultetes.setRows(5);
         jScrollPane1.setViewportView(consultetes);
 
-        executa.setText("Executar");
+        executa.setText("Select");
         executa.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusGained(java.awt.event.FocusEvent evt) {
                 executaFocusGained(evt);
@@ -99,6 +100,23 @@ public class Inici extends javax.swing.JFrame {
             }
         ));
         jScrollPane2.setViewportView(tabla);
+
+        bianda.setText("bianda");
+        bianda.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                biandaFocusGained(evt);
+            }
+        });
+        bianda.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                biandaMouseClicked(evt);
+            }
+        });
+        bianda.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                biandaActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -121,6 +139,8 @@ public class Inici extends javax.swing.JFrame {
                                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 375, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(executa)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(bianda)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(jButton2)))
                         .addGap(25, 25, 25))))
@@ -137,7 +157,8 @@ public class Inici extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(executa)
-                    .addComponent(jButton2))
+                    .addComponent(jButton2)
+                    .addComponent(bianda))
                 .addContainerGap())
         );
 
@@ -221,6 +242,39 @@ public class Inici extends javax.swing.JFrame {
 
     }//GEN-LAST:event_executaFocusGained
 
+    private void biandaFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_biandaFocusGained
+        // TODO add your handling code here:
+    }//GEN-LAST:event_biandaFocusGained
+
+    private void biandaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_biandaMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_biandaMouseClicked
+
+    private void biandaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_biandaActionPerformed
+Connection conn = null;
+        String url = "jdbc:mysql://localhost:3306/univeylandia_laravel";
+        String user = "root";
+        String password = "alumne";
+        try {
+            
+            conn = DriverManager.getConnection(url, user, password);
+            
+            String consulta = consultetes.getText();
+            
+            Statement stmt = conn.createStatement();
+            
+            stmt.executeUpdate(consulta);
+            
+            //System.out.println();
+            //imprimir en taula
+                   
+        } catch (Exception e) {
+
+        }
+
+ 
+    }//GEN-LAST:event_biandaActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -257,6 +311,7 @@ public class Inici extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton bianda;
     private javax.swing.JTextArea consultetes;
     private javax.swing.JButton executa;
     private javax.swing.JButton jButton2;
