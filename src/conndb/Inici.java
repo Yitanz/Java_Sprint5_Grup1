@@ -29,7 +29,7 @@ public class Inici extends javax.swing.JFrame {
     public Connection Cone() {
         Connection conn = null;
 
-        String url = "jdbc:mysql://localhost:3306/univeylandia_laravel";
+        String url = "jdbc:mysql://localhost:3306/univeylandia_test2";
         String user = "root";
         String password = "alumne";
         try {
@@ -174,7 +174,7 @@ public class Inici extends javax.swing.JFrame {
         // TODO add your handling code here:
         Connection conn = null;
 
-        String url = "jdbc:mysql://localhost:3306/univeylandia_laravel";
+        String url = "jdbc:mysql://localhost:3306/univeylandia_test2";
         String user = "root";
         String password = "alumne";
         try {
@@ -193,7 +193,7 @@ public class Inici extends javax.swing.JFrame {
     private void executaFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_executaFocusGained
         // TODO add your handling code here:
         Connection conn = null;
-        String url = "jdbc:mysql://localhost:3306/univeylandia_laravel";
+        String url = "jdbc:mysql://localhost:3306/univeylandia_test2";
         String user = "root";
         String password = "alumne";
         try {
@@ -252,7 +252,7 @@ public class Inici extends javax.swing.JFrame {
 
     private void biandaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_biandaActionPerformed
 Connection conn = null;
-        String url = "jdbc:mysql://localhost:3306/univeylandia_laravel";
+        String url = "jdbc:mysql://localhost:3306/univeylandia_test2";
         String user = "root";
         String password = "alumne";
         try {
