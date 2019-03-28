@@ -88,6 +88,11 @@ public class Inici extends javax.swing.JFrame {
                 executaFocusGained(evt);
             }
         });
+        executa.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                executaActionPerformed(evt);
+            }
+        });
 
         jButton2.setText("Tancar");
 
@@ -101,7 +106,7 @@ public class Inici extends javax.swing.JFrame {
         ));
         jScrollPane2.setViewportView(tabla);
 
-        bianda.setText("bianda");
+        bianda.setText("Insert/delete/update");
         bianda.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusGained(java.awt.event.FocusEvent evt) {
                 biandaFocusGained(evt);
@@ -132,18 +137,17 @@ public class Inici extends javax.swing.JFrame {
                         .addGap(0, 0, Short.MAX_VALUE)
                         .addComponent(jLabel1)
                         .addGap(73, 73, 73))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(0, 0, Short.MAX_VALUE)
-                                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 375, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(6, 6, 6)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(executa)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(bianda)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jButton2)))
-                        .addGap(25, 25, 25))))
+                                .addComponent(bianda)
+                                .addGap(24, 24, 24)
+                                .addComponent(jButton2))
+                            .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 375, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(0, 19, Short.MAX_VALUE))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -274,6 +278,10 @@ Connection conn = null;
 
  
     }//GEN-LAST:event_biandaActionPerformed
+
+    private void executaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_executaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_executaActionPerformed
 
     /**
      * @param args the command line arguments
